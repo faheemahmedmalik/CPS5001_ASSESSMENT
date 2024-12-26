@@ -1,11 +1,10 @@
 public class Address {
+    private String street;     // Street address
+    private String city;       // City name
+    private String postalCode; // Postal code
+    private String country;    // Country name
 
-    private String street;
-    private String city;
-    private String postalCode;
-    private String country;
-
-
+    // Constructor to initialize the address
     public Address(String street, String city, String postalCode, String country) {
         this.street = street;
         this.city = city;
@@ -13,30 +12,35 @@ public class Address {
         this.country = country;
     }
 
-
-    public String get_Street_name() {
+    // Getters for address components
+    public String getStreet() {
         return street;
     }
 
-    public String get_City_name() {
+    public String getCity() {
         return city;
     }
 
-    public String get_PostCode() {
+    public String getPostalCode() {
         return postalCode;
     }
 
-    public String get_Country_name() {
+    public String getCountry() {
         return country;
     }
 
+    // Example: Validating UK post using Regex
 
-    public String display_Address() {
-        return street + ", " + city + ", " + postalCode + ", " + country;
+    public boolean isValidPostalCode() {
+        // Regex for UK postcodes
+        String ukPostcodeRegex = "^[A-Z]{1,2}\\d[A-Z\\d]? \\d[A-Z]{2}$";
+        return postalCode.matches(ukPostcodeRegex);
     }
 
 
-
-
-
+    // String representation of the address
+    @Override
+    public String toString() {
+        return street + ", " + city + ", " + postalCode + ", " + country;
+    }
 }
