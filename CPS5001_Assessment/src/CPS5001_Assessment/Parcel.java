@@ -1,3 +1,7 @@
+package CPS5001_Assessment;
+
+
+
 // Represents a parcel to be delivered to a specific destination.
 public class Parcel {
     private String id;

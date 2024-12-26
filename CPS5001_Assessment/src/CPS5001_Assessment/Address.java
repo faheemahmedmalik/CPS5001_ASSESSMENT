@@ -1,3 +1,6 @@
+package CPS5001_Assessment;
+
+
 public class Address {
     private String street;     // Street address
     private String city;       // City name

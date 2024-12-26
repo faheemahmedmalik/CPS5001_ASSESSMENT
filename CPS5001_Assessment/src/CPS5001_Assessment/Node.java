@@ -1,34 +1,35 @@
-public class Node {
+package CPS5001_Assessment;
 
+
+public class Node {
     private String id;
     private String name;
     private Address address;
-
 
     public Node(String id, String name, Address address) {
         this.id = id;
         this.name = name;
         this.address = address;
+
+
+
+
     }
 
-    public String getId()
-    {
+    public String getId() {
         return id;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public Address getAddress()
-    {
+    public Address getAddress() {
         return address;
     }
 
-    public String toDisplayString()
-    {
-        return name + " (" + id + ")";
+    @Override
+    public String toString() {
+        return name + " (" + id + ") - " + address;
     }
-}
 }

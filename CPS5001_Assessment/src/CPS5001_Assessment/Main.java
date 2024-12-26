@@ -1,4 +1,5 @@
-import java.util.*;
+package CPS5001_Assessment;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -18,4 +19,3 @@ public class Main {
 
         }
     }
-}
