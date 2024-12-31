@@ -11,6 +11,14 @@ public class Van {
     private List<Parcel> parcels;
 
 
+    public Van(String id, double capacity) {
+        this.id = id;
+        this.capacity = capacity;
+        this.currentLoad = 0;
+        this.parcels = new ArrayList<>();
+    }
+
+
 
 
 
