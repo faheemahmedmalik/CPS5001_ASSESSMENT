@@ -31,6 +31,36 @@ public class Van {
     }
 
 
+    public boolean canAccommodate(double weight) {
+        return currentLoad + weight <= capacity;}
+
+
+    public void addParcel(Parcel parcel) {
+        if (canAccommodate(parcel.getWeight())) {
+            parcels.add(parcel);
+            currentLoad += parcel.getWeight();
+        } else {
+            throw new IllegalArgumentException("Parcel exceeds van capacity");
+        }
+    }
+
+
+    public List<Parcel> getParcels() {
+        return parcels;
+    }
+
+
+
+    public String toString() {
+        return "Van{id='" + id + "', capacity=" + capacity +
+                ", currentLoad=" + currentLoad + ", parcels=" + parcels + '}';
+    }
+
+
+
+
+
+
 
 
 
