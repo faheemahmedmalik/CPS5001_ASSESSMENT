@@ -18,6 +18,26 @@ public class Van {
         this.parcels = new ArrayList<>();
     }
 
+    public String getId() {
+        return id;}
+
+
+    public double getCapacity() {
+        return capacity;}
+
+
+    public double getCurrentLoad() {
+        return currentLoad;
+    }
+
+
+
+
+
+
+
+
+
 
 
 
