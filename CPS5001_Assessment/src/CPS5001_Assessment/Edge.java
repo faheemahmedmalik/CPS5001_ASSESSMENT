@@ -12,5 +12,25 @@ public class Edge {
         this.destination = destination;
         this.distance = distance;
 
+    }
+
+
+
+// getter and setter methods
+    public Node getSource() {
+        return source;
+    }
+
+    public Node getDestination() {
+        return destination;
+    }
+
+    public double getDistance() {
+        return distance;
+    }
+
+
+
+
 
 }
