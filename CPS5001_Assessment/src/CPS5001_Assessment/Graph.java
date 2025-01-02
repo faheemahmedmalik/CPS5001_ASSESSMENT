@@ -16,4 +16,12 @@ public class Graph {
     }
 
 
+    public void addEdge(Node source, Node destination, double distance, double congestion) {
+
+
+        Edge edge = new Edge(source, destination, distance, congestion);
+        list.get(source).add(edge);
+    }
+
+
 }
