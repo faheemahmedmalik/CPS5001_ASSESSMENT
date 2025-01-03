@@ -7,8 +7,8 @@ public class Graph {
     private Map<Node, List<Edge>> list = new HashMap<>();
 
     public void addNode(Node root) {
-        if(!list.containsKey(root)){
-            list.put(root,new ArrayList<>());
+        if (!list.containsKey(root)) {
+            list.put(root, new ArrayList<>());
         }
     }
 
@@ -24,8 +24,6 @@ public class Graph {
         Map<Node, Double> distances = new HashMap<>();
         Map<Node, Node> visited = new HashMap<>();
         PriorityQueue<Node> q = new PriorityQueue<>(Comparator.comparingDouble(distances::get));
-
-
 
 
         for (Node n : list.keySet()) {
@@ -50,6 +48,5 @@ public class Graph {
         }
 
 
-
-
     }
+}
