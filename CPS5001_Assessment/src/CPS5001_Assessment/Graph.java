@@ -34,6 +34,21 @@ public class Graph {
         distances.put(start, 0.0);
         q.add(start);
 
+        while (!q.isEmpty()) {
+            Node temp = q.poll();
+
+            for (Edge e : list.getOrDefault(temp, Collections.emptyList())) {
+                Node nbr = e.getDestination();
+                double addedDist = distances.get(temp) + e.getDistance();
+
+                if (addedDist < distances.get(nbr)) {
+                    distances.put(nbr, addedDist);
+                    visited.put(nbr, temp);
+                    q.add(nbr);
+                }
+            }
+        }
+
 
 
 
