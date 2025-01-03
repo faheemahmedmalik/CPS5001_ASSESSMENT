@@ -27,4 +27,14 @@ public class Graph {
 
 
 
+
+        for (Node n : list.keySet()) {
+            distances.put(n, Double.MAX_VALUE);
+        }
+        distances.put(start, 0.0);
+        q.add(start);
+
+
+
+
     }
