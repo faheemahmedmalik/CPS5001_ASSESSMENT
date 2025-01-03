@@ -1,9 +1,6 @@
 package CPS5001_Assessment;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Graph {
 
@@ -23,5 +20,11 @@ public class Graph {
         list.get(source).add(edge);
     }
 
+    public List<Node> dijkstraAlgo(Node start, Node end) {
+        Map<Node, Double> distances = new HashMap<>();
+        Map<Node, Node> visited = new HashMap<>();
+        PriorityQueue<Node> q = new PriorityQueue<>(Comparator.comparingDouble(distances::get));
 
-}
+
+
+    }
