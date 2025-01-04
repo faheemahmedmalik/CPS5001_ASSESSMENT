@@ -47,14 +47,34 @@ public class Graph {
             }
         }
 
-        List<Node> path = new ArrayList<>();
-        Node current = end;
-        while (current = null) {
-            path.add(current);
-            current = visited.get(current);
+        List<Node> city_sequence = new ArrayList<>();
+        Node n = end;
+        while (n != null) {
+            city_sequence.addFirst(n);
+            n = visited.get(n);
+        }
+        return city_sequence;
+    }
 
+    public Edge getEdgeBetween(Node src, Node dest) {
+        List<Edge> edges = list.get(src);
+        for (Edge edge : edges) {
+            if (edge.getDestination().equals(dest)) {
+                return edge;
+            }
+        }
+        return null;
+    }
 
+    public List<Edge> getEdgesFromNode(Node src) {
+        return list.getOrDefault(src, List.of());
+    }
 
-
+    public String displayGraph() {
+        StringBuilder sb = new StringBuilder();
+        for (var entry : list.entrySet()) {
+            sb.append(entry.getKey()).append(" -> ").append(entry.getValue()).append("\n");
+        }
+        return sb.toString();
     }
 }
