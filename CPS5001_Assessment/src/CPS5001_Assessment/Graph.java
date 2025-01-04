@@ -47,6 +47,14 @@ public class Graph {
             }
         }
 
+        List<Node> path = new ArrayList<>();
+        Node current = end;
+        while (current = null) {
+            path.add(current);
+            current = visited.get(current);
+
+
+
 
     }
 }
