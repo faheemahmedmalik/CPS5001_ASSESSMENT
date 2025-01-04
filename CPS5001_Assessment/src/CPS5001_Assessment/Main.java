@@ -15,6 +15,29 @@ public class Main {
 
 
 
+        Graph graph = new Graph();
+
+        // Create nodes
+        Node nodeA = new Node("A", "A", customerAddress1);
+
+        Node nodeB = new Node("B", "B", customerAddress2);
+
+
+
+        // Create edges
+        Edge edgeAB = new Edge(nodeA, nodeB, 10);
+
+
+        // Add edges to the graph
+        graph.list.put(nodeA, List.of(edgeAB, edgeAC));
+
+        // Display the graph
+        System.out.println("Graph Representation:");
+        System.out.println(graph.displayGraph());
+
+
+
+
 
 
 
