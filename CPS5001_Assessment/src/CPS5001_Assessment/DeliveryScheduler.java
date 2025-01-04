@@ -14,6 +14,14 @@ public class DeliveryScheduler {
 
 
 
+    public void addVan(Van curr_van) {
+        v.put(curr_van, new ArrayList<>());
+    }
+    public void addParcel(Parcel curr_parcel) {
+        p.add(curr_parcel);
+
+
+
 
 
 }
