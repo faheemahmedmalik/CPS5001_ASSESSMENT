@@ -4,6 +4,9 @@ public class Edge {
     private Node source;
     private Node destination;
     private double distance;
+    private double congestion;
+    private int vehicleCount;
+
 
 
 
