@@ -53,6 +53,28 @@ public class CityLogisticsTerminal {
         return new Node("N1", "Hub A", null); // Use the real predefined node if available
     }
 
+    private void addNode(Scanner scanner) {
+        System.out.print("Enter Node ID: ");
+        String id = scanner.nextLine();
+        System.out.print("Enter Node Name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter Address (Street): ");
+        String street = scanner.nextLine();
+        System.out.print("Enter City: ");
+        String city = scanner.nextLine();
+        System.out.print("Enter Postal Code: ");
+        String postalCode = scanner.nextLine();
+        System.out.print("Enter Country: ");
+        String country = scanner.nextLine();
+
+        Address address = new Address(street, city, postalCode, country);
+        graph.addNode(new Node(id, name, address));
+        System.out.println("Node added successfully.");
+    }
+
+
+
+
 
 
 
