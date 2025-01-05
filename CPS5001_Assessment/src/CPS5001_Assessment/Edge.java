@@ -57,6 +57,17 @@ public class Edge {
         return distance;
     }
 
+    public double getCongestion() {return congestion;}
+
+
+    @Override
+    public String toString() {
+        return destination + " (Distance: " + distance + ", Congestion: " + congestion + ")";
+    }
+}
+
+
+
 
 
 
