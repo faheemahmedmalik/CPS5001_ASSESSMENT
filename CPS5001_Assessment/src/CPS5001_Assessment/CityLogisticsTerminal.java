@@ -73,6 +73,46 @@ public class CityLogisticsTerminal {
     }
 
 
+    private void addEdge(Scanner scanner) {
+        System.out.print("Enter Source Node ID: ");
+        String sourceId = scanner.nextLine();
+        System.out.print("Enter Destination Node ID: ");
+        String destId = scanner.nextLine();
+        System.out.print("Enter Distance: ");
+        double distance = Double.parseDouble(scanner.nextLine());
+        System.out.print("Enter Congestion Level: ");
+        double congestion = Double.parseDouble(scanner.nextLine());
+
+        Node source = new Node(sourceId, sourceId, null);
+        Node destination = new Node(destId, destId, null);
+        graph.addEdge(source, destination, distance, congestion);
+        System.out.println("Edge added successfully.");
+    }
+
+    private void addVan(Scanner scanner) {
+        System.out.print("Enter Van ID: ");
+        String id = scanner.nextLine();
+        System.out.print("Enter Van Capacity: ");
+        double capacity = Double.parseDouble(scanner.nextLine());
+        scheduler.addVan(new Van(id, capacity));
+        System.out.println("Van added successfully.");
+    }
+
+    private void addParcel(Scanner scanner) {
+        System.out.print("Enter Parcel ID: ");
+        String id = scanner.nextLine();
+        System.out.print("Enter Destination Node ID: ");
+        String nodeId = scanner.nextLine();
+        System.out.print("Enter Parcel Weight: ");
+        double weight = Double.parseDouble(scanner.nextLine());
+        System.out.print("Enter Parcel Deadline: ");
+        double deadline = Double.parseDouble(scanner.nextLine());
+        Node destination = new Node(nodeId, nodeId, null);
+        scheduler.addParcel(new Parcel(id, destination, weight, deadline));
+        System.out.println("Parcel added successfully.");
+    }
+
+
 
 
 
