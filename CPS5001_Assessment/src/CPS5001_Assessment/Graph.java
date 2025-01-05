@@ -37,7 +37,7 @@ public class Graph {
 
             for (Edge e : list.getOrDefault(temp, Collections.emptyList())) {
                 Node nbr = e.getDestination();
-                double addedDist = distances.get(temp) + e.getDistance();
+                double addedDist = distances.get(temp) + e.getEffectiveDistance();
 
                 if (addedDist < distances.get(nbr)) {
                     distances.put(nbr, addedDist);
