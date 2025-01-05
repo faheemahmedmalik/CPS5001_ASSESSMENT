@@ -16,8 +16,24 @@ public class Edge {
         this.distance = distance;
         this.congestion = congestion;
         this.vehicleCount = 0;
+    }
 
 
+    public void incrementVehicleCount() {
+        vehicleCount++;
+        updateCongestion();
+    }
+
+    public void decrementVehicleCount() {
+        if (vehicleCount > 0) {
+            vehicleCount--;
+            updateCongestion();
+        }
+    }
+
+    private void updateCongestion() {
+        // Example formula: Each vehicle adds 2 units of congestion
+        congestion = vehicleCount * 2;
     }
 
 
