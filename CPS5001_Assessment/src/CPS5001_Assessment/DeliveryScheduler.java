@@ -31,6 +31,8 @@ public class DeliveryScheduler {
                 assignedVan.addParcel(temp);
                 v.get(assignedVan).add(temp);
                 List<Node> route = g.dijkstraAlgo(source_node, temp.getDestination());
+                vehicleCounts(route, true);
+                vehicleCounts(route, false);
                 System.out.println("Assigned " + temp + " to van " + assignedVan.getId());
 
                 for (int i = 0; i < route.size() - 1; i++) {
