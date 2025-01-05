@@ -14,6 +14,9 @@ public class Edge {
         this.source = source;
         this.destination = destination;
         this.distance = distance;
+        this.congestion = congestion;
+        this.vehicleCount = 0;
+
 
     }
 
