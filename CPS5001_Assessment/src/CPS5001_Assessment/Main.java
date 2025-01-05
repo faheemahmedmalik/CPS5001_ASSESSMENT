@@ -84,6 +84,10 @@ public class Main {
         scheduler.displaySchedule();
 
 
+        // Start the interactive terminal
+        terminal.start();
+
+
 
 
 
