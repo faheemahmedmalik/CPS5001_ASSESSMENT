@@ -22,9 +22,6 @@ public class DeliveryScheduler {
     }
 
 
-
-
-
     public void scheduleParcels(Node source_node) {
         while (!p.isEmpty()) {
             Parcel temp = p.poll();
@@ -46,6 +43,23 @@ public class DeliveryScheduler {
                 }
             } else {
                 System.out.println("No suitable van available for parcel: " + temp);
+            }
+        }
+    }
+
+
+    public void vehicleCounts(List<Node> route, boolean flag) {
+        for (int i = 0; i < route.size() - 1; i++) {
+            Node temp_src = route.get(i);
+            Node temp_dest = route.get(i + 1);
+            for (Edge edge : g.getEdgesFromNode(temp_src)) {
+                if (edge.getDestination().equals(temp_dest)) {
+                    if (flag) {
+                        edge.incrementVehicleCount();
+                    } else {
+                        edge.decrementVehicleCount();
+                    }
+                }
             }
         }
     }
