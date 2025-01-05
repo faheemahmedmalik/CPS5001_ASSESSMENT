@@ -32,9 +32,15 @@ public class Edge {
     }
 
     private void updateCongestion() {
-        // Example formula: Each vehicle adds 2 units of congestion
+
         congestion = vehicleCount * 2;
     }
+
+
+    public double getEffectiveDistance() {
+        return distance + congestion; //   distance + congestion
+    }
+
 
 
 
