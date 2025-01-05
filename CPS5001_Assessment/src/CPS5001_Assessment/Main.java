@@ -41,6 +41,50 @@ public class Main {
         System.out.println(terminal.getGraph().displayGraph());
 
 
+        // Create DeliveryScheduler and predefined vans
+        DeliveryScheduler scheduler = terminal.getScheduler();
+        Van van1 = new Van("V1", 100);
+        Van van2 = new Van("V2", 200);
+        Van van3 = new Van("V3", 150);
+        Van van4 = new Van("V4", 150); // Additional van for handling more parcels
+        scheduler.addVan(van1);
+        scheduler.addVan(van2);
+        scheduler.addVan(van3);
+        scheduler.addVan(van4);
+
+        // Display predefined vans
+        System.out.println("\n=== Predefined Vans ===");
+        System.out.println(van1);
+        System.out.println(van2);
+        System.out.println(van3);
+        System.out.println(van4);
+
+        // Add predefined parcels
+        scheduler.addParcel(new Parcel("P1", customerB, 20, 5)); // Parcel to Customer B
+        scheduler.addParcel(new Parcel("P2", customerC, 30, 10)); // Parcel to Customer C
+        scheduler.addParcel(new Parcel("P3", customerE, 40, 15)); // Parcel to Customer E
+        scheduler.addParcel(new Parcel("P4", customerE, 50, 20)); // Parcel to Customer E
+        scheduler.addParcel(new Parcel("P5", customerE, 25, 8));  // Parcel to Customer E
+        scheduler.addParcel(new Parcel("P6", customerB, 35, 18)); // Parcel to Customer B
+        scheduler.addParcel(new Parcel("P7", customerB, 45, 25)); // Parcel to Customer B
+        scheduler.addParcel(new Parcel("P8", customerC, 15, 12)); // Parcel to Customer C
+
+        // Display predefined parcels
+        System.out.println("\n=== Predefined Parcels ===");
+        for (int i = 1; i <= 8; i++) {
+            System.out.println("Parcel P" + i);
+        }
+
+        // Schedule parcels
+        System.out.println("\n=== Scheduling Parcels ===");
+        scheduler.scheduleParcels(hubA);
+
+        // Display final delivery schedule
+        System.out.println("\n=== Final Delivery Schedule ===");
+        scheduler.displaySchedule();
+
+
+
 
 
 
