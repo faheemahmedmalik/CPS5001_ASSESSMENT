@@ -22,6 +22,26 @@ public class Main {
         Node customerE = new Node("N5", "Customer E", customerAddress4);
 
 
+        // Add  nodes to the graph
+        terminal.getGraph().addNode(hubA);
+        terminal.getGraph().addNode(customerB);
+        terminal.getGraph().addNode(customerC);
+        terminal.getGraph().addNode(StmarysUniversity);
+        terminal.getGraph().addNode(customerE);
+
+        // Add  edges to the graph
+        terminal.getGraph().addEdge(hubA, customerB, 10, 0); // Hub A -> Customer B
+        terminal.getGraph().addEdge(hubA, customerC, 15, 0); // Hub A -> Customer C
+        terminal.getGraph().addEdge(customerB, customerC, 7, 0); // Customer B -> Customer C
+        terminal.getGraph().addEdge(customerC,StmarysUniversity,5,0.25); // Customer c to Customer D
+        terminal.getGraph().addEdge(StmarysUniversity,customerE,4,0.5);// Customer D to Customer E
+
+        // Display the  graph
+        System.out.println("=== Predefined Graph Loaded ===");
+        System.out.println(terminal.getGraph().displayGraph());
+
+
+
 
 
 
